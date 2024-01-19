@@ -12,7 +12,7 @@ function App() {
 
   for (let i = 1; i <= 100; i++) {
     let maxHp = (((i*2)**2)) - i**2;
-    let goldReward = Math.floor(5 * Math.pow(1.2, i - 1));
+    let goldReward = Math.ceil(maxHp/10**(i*1.5/i));
 
     xHp.push(i);
     yHp.push(maxHp);
