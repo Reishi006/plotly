@@ -1,0 +1,19 @@
+html, body, .app-container {
+  min-height: 100vh;
+}
+
+body {
+  background-color: rgb(196, 231, 219);
+  font-size: 24px;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plot-container {
+  width: 30%;
+  height: 30%;
+}
