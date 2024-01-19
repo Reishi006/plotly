@@ -4,23 +4,29 @@ import Plot from 'react-plotly.js';
 
 function App() {
 
-  let xHp = [];
+  let x10 = [];
   let yHp = [];
 
-  let xGold = [];
   let yGold = [];
 
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 0; i <= 1000000; i=i+10000) {
     let maxHp = (((i*2)**2)) - i**2;
-    let goldReward = Math.ceil(maxHp/10**(i*1.5/i));
+    let goldReward = Math.ceil(maxHp / 10 ** (i**0.05));
 
-    xHp.push(i);
+    x10.push(i);
     yHp.push(maxHp);
 
-    xGold.push(i);
     yGold.push(goldReward);
   }
   console.log(yHp);
+
+
+  let testArr = [];
+  for (let i = 0; i <= 100; i++) {
+    let test = i**0.05;
+    testArr.push(test);
+  }
+  console.log(testArr);
 
   return (
     <>
@@ -29,7 +35,7 @@ function App() {
           <Plot
             data={[
               {
-                x: xHp,
+                x: x10,
                 y: yHp,
                 type: 'scatter',
                 mode: 'lines+markers',
@@ -37,7 +43,7 @@ function App() {
                 name: 'Hp plot',
               },
               {
-                x: xGold,
+                x: x10,
                 y: yGold,
                 type: 'scatter',
                 mode: 'lines+markers',
