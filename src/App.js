@@ -9,7 +9,7 @@ function App() {
 
   let yGold = [];
 
-  for (let i = 0; i <= 1000000; i=i+10000) {
+  for (let i = 0; i <= 100000; i=i+1000) {
     let maxHp = (((i*2)**2)) - i**2;
     let goldReward = Math.ceil(maxHp / 10 ** (i**0.05));
 
@@ -39,7 +39,7 @@ function App() {
                 y: yHp,
                 type: 'scatter',
                 mode: 'lines+markers',
-                marker: {color: 'red'},
+                line: {color: 'red'},
                 name: 'Hp plot',
               },
               {
@@ -47,8 +47,7 @@ function App() {
                 y: yGold,
                 type: 'scatter',
                 mode: 'lines+markers',
-                line: 'yellow',
-                marker: {color: 'darkyellow'},
+                line: {color: '#fcc930'},
                 name: 'Gold plot',
               },
             ]}
