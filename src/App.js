@@ -9,6 +9,7 @@ function App() {
 
   let yGold = [];
 
+
   for (let i = 0; i <= 100000; i=i+1000) {
     let maxHp = (((i*2)**2)) - i**2;
     let goldReward = Math.ceil(maxHp / 10 ** (i**0.05));
@@ -19,6 +20,27 @@ function App() {
     yGold.push(goldReward);
   }
   console.log(yHp);
+
+
+  let x1to10 = [];
+  let yHp1to10 = [];
+
+  for (let i = 1; i <= 10; i++) {
+    let maxHp = (((i*2)**2)) - i**2;
+
+    x1to10.push(i);
+    yHp1to10.push(maxHp);
+  }
+
+  let x50to100 = [];
+  let yHp50to100 = [];
+
+  for (let i = 50; i <= 100; i++) {
+    let maxHp = (((i*2)**2)) - i**2;
+
+    x50to100.push(i);
+    yHp50to100.push(maxHp);
+  }
 
 
   let testArr = [];
@@ -52,6 +74,34 @@ function App() {
               },
             ]}
             layout={ {autosize: true, title: 'Gold + MaxHP based on level'} }
+            useResizeHandler={true}
+          />
+          <Plot
+            data={[
+              {
+                x: x1to10,
+                y: yHp1to10,
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: 'red'},
+                name: 'Hp plot lv 1-10',
+              },
+            ]}
+            layout={ {autosize: true, title: 'MaxHP levels 1-10'} }
+            useResizeHandler={true}
+          />
+          <Plot
+            data={[
+              {
+                x: x50to100,
+                y: yHp50to100,
+                type: 'scatter',
+                mode: 'lines+markers',
+                line: {color: 'red'},
+                name: 'Hp plot lv 50-100',
+              },
+            ]}
+            layout={ {autosize: true, title: 'MaxHP levels 50-100'} }
             useResizeHandler={true}
           />
         </div>
