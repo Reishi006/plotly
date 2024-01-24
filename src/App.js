@@ -53,6 +53,22 @@ function App() {
     yGold100.push(goldReward);
   }
 
+  //pie chart
+  let itemData = [100, 1000, 25000, 125000];
+
+  let itemCostDiff_subtract = [
+    Math.abs(itemData[0]-itemData[1]),
+    Math.abs(itemData[1]-itemData[2]),
+    Math.abs(itemData[2]-itemData[3]),
+  ]; //between: 1st and 2nd, 2nd and 3rd, 3rd and 4th; 
+  console.log(itemCostDiff_subtract);
+
+  let itemCostDiff_divide = [
+    Math.abs(itemData[1]/itemData[0]),
+    Math.abs(itemData[2]/itemData[1]),
+    Math.abs(itemData[3]/itemData[2]),
+  ]; //between: 1st and 2nd, 2nd and 3rd, 3rd and 4th;
+  console.log(itemCostDiff_divide);
 
   let testArr = [];
   for (let i = 0; i <= 100; i++) {
@@ -127,6 +143,22 @@ function App() {
               },
             ]}
             layout={ {autosize: true, title: 'Gold plot'} }
+            useResizeHandler={true}
+          />
+
+          <Plot
+            data={[
+              {
+                x: ['1st to 2nd', '2nd to 3rd', '3rd to 4th'],
+                y: itemCostDiff_divide,
+                marker: {
+                  color: ['blue', 'green', 'red'],
+                },
+                type: 'bar',
+                name: 'Items plot',
+              },
+            ]}
+            layout={ {autosize: true, title: 'Items cost difference'} }
             useResizeHandler={true}
           />
         </div>
