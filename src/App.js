@@ -181,7 +181,7 @@ function App() {
                 values: yLevelGold,
                 labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
                 marker: {
-                  color: ['blue', 'green', 'red'],
+                  colors: ['#524300', '#7a6000', '#a17b00', '#cc9600', '#e6a900', '#ffbe0a', '#ffcb59', '#ffa754', '#ff7e29', '#ff4b0f'],
                 },
                 type: 'pie',
                 name: 'Gold income',
