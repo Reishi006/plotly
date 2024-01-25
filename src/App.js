@@ -70,6 +70,19 @@ function App() {
   ]; //between: 1st and 2nd, 2nd and 3rd, 3rd and 4th;
   console.log(itemCostDiff_divide);
 
+
+  let yLevelGold = [];
+
+  for (let i = 1; i <= 10; i++) {
+    let maxHp = (((i*2)**2)) - i**2;
+    let goldReward = Math.ceil(maxHp / 10 ** (i**0.05));
+
+    yLevelGold.push(goldReward);
+  }
+
+
+
+
   let testArr = [];
   for (let i = 0; i <= 100; i++) {
     let test = i**0.05;
@@ -158,7 +171,23 @@ function App() {
                 name: 'Items plot',
               },
             ]}
-            layout={ {autosize: true, title: 'Items cost difference'} }
+            layout={ {autosize: true, title: 'Each item cost multiplier relative to the next one'} }
+            useResizeHandler={true}
+          />
+
+          <Plot
+            data={[
+              {
+                values: yLevelGold,
+                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                marker: {
+                  color: ['blue', 'green', 'red'],
+                },
+                type: 'pie',
+                name: 'Gold income',
+              },
+            ]}
+            layout={ {autosize: true, title: 'Gold income from planets lv.1-10'} }
             useResizeHandler={true}
           />
         </div>
