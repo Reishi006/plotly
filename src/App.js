@@ -165,7 +165,7 @@ function App() {
                 x: ['1st to 2nd', '2nd to 3rd', '3rd to 4th'],
                 y: itemCostDiff_divide,
                 marker: {
-                  color: ['blue', 'green', 'red'],
+                  color: ['#4287f5', '#5af542', '#f54242'],
                 },
                 type: 'bar',
                 name: 'Items plot',
