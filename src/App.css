@@ -3,7 +3,8 @@ html, body, .app-container {
 }
 
 body {
-  background-color: rgb(196, 231, 219);
+  background: rgb(30,55,56);
+  background: linear-gradient(0deg, rgba(30,55,56,1) 0%, rgba(19,36,33,1) 100%);
   font-size: 24px;
 }
 
