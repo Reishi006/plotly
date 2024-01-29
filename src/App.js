@@ -113,7 +113,12 @@ function App() {
                 name: 'Gold plot',
               },
             ]}
-            layout={ {autosize: true, title: 'Gold + MaxHP based on level'} }
+            layout={ {
+              autosize: true, 
+              title: 'Gold + MaxHP based on level', 
+              paper_bgcolor: "rgb(157, 192, 194)",
+              plot_bgcolor: "rgb(157, 192, 194)",
+            } }
             useResizeHandler={true}
           />
           <Plot
@@ -127,7 +132,12 @@ function App() {
                 name: 'Hp plot lv 1-10',
               },
             ]}
-            layout={ {autosize: true, title: 'MaxHP levels 1-10'} }
+            layout={ {
+              autosize: true, 
+              title: 'MaxHP levels 1-10',
+              paper_bgcolor: "rgb(157, 192, 194)",
+              plot_bgcolor: "rgb(157, 192, 194)",
+            } }
             useResizeHandler={true}
           />
           <Plot
@@ -141,7 +151,12 @@ function App() {
                 name: 'Hp plot lv 50-100',
               },
             ]}
-            layout={ {autosize: true, title: 'MaxHP levels 50-100'} }
+            layout={ {
+              autosize: true, 
+              title: 'MaxHP levels 50-100',
+              paper_bgcolor: "rgb(157, 192, 194)",
+              plot_bgcolor: "rgb(157, 192, 194)",
+            } }
             useResizeHandler={true}
           />
           <Plot
@@ -155,7 +170,12 @@ function App() {
                 name: 'Gold plot',
               },
             ]}
-            layout={ {autosize: true, title: 'Gold plot'} }
+            layout={ {
+              autosize: true,
+              title: 'Gold plot',
+              paper_bgcolor: "rgb(157, 192, 194)",
+              plot_bgcolor: "rgb(157, 192, 194)",
+            } }
             useResizeHandler={true}
           />
 
@@ -171,7 +191,12 @@ function App() {
                 name: 'Items plot',
               },
             ]}
-            layout={ {autosize: true, title: 'Each item cost multiplier relative to the next one'} }
+            layout={ {
+              autosize: true, 
+              title: 'Each item cost multiplier relative to the next one',
+              paper_bgcolor: "rgb(157, 192, 194)",
+              plot_bgcolor: "rgb(157, 192, 194)",
+            } }
             useResizeHandler={true}
           />
 
@@ -187,7 +212,12 @@ function App() {
                 name: 'Gold income',
               },
             ]}
-            layout={ {autosize: true, title: 'Gold income from planets lv.1-10'} }
+            layout={ {
+              autosize: true, 
+              title: 'Gold income from planets lv.1-10',
+              paper_bgcolor: "rgb(157, 192, 194)",
+              plot_bgcolor: "rgb(157, 192, 194)",
+            } }
             useResizeHandler={true}
           />
         </div>
