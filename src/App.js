@@ -94,132 +94,149 @@ function App() {
     <>
       <div className='app-container'>
         <div className='plot-container'>
-          <Plot
-            data={[
-              {
-                x: x10,
-                y: yHp,
-                type: 'scatter',
-                mode: 'lines+markers',
-                line: {color: 'red'},
-                name: 'Hp plot',
-              },
-              {
-                x: x10,
-                y: yGold,
-                type: 'scatter',
-                mode: 'lines+markers',
-                line: {color: '#fcc930'},
-                name: 'Gold plot',
-              },
-            ]}
-            layout={ {
-              autosize: true, 
-              title: 'Gold + MaxHP based on level', 
-              paper_bgcolor: "rgb(157, 192, 194)",
-              plot_bgcolor: "rgb(157, 192, 194)",
-            } }
-            useResizeHandler={true}
-          />
-          <Plot
-            data={[
-              {
-                x: x1to10,
-                y: yHp1to10,
-                type: 'scatter',
-                mode: 'lines+markers',
-                line: {color: 'red'},
-                name: 'Hp plot lv 1-10',
-              },
-            ]}
-            layout={ {
-              autosize: true, 
-              title: 'MaxHP levels 1-10',
-              paper_bgcolor: "rgb(157, 192, 194)",
-              plot_bgcolor: "rgb(157, 192, 194)",
-            } }
-            useResizeHandler={true}
-          />
-          <Plot
-            data={[
-              {
-                x: x50to100,
-                y: yHp50to100,
-                type: 'scatter',
-                mode: 'lines+markers',
-                line: {color: 'red'},
-                name: 'Hp plot lv 50-100',
-              },
-            ]}
-            layout={ {
-              autosize: true, 
-              title: 'MaxHP levels 50-100',
-              paper_bgcolor: "rgb(157, 192, 194)",
-              plot_bgcolor: "rgb(157, 192, 194)",
-            } }
-            useResizeHandler={true}
-          />
-          <Plot
-            data={[
-              {
-                x: x100,
-                y: yGold100,
-                type: 'scatter',
-                mode: 'lines+markers',
-                line: {color: '#fcc930'},
-                name: 'Gold plot',
-              },
-            ]}
-            layout={ {
-              autosize: true,
-              title: 'Gold plot',
-              paper_bgcolor: "rgb(157, 192, 194)",
-              plot_bgcolor: "rgb(157, 192, 194)",
-            } }
-            useResizeHandler={true}
-          />
-
-          <Plot
-            data={[
-              {
-                x: ['1st to 2nd', '2nd to 3rd', '3rd to 4th'],
-                y: itemCostDiff_divide,
-                marker: {
-                  color: ['#4287f5', '#5af542', '#f54242'],
+          
+          <div className='plot-div'>
+            <Plot
+              data={[
+                {
+                  x: x10,
+                  y: yHp,
+                  type: 'scatter',
+                  mode: 'lines+markers',
+                  line: {color: 'red'},
+                  name: 'Hp plot',
                 },
-                type: 'bar',
-                name: 'Items plot',
-              },
-            ]}
-            layout={ {
-              autosize: true, 
-              title: 'Each item cost multiplier relative to the next one',
-              paper_bgcolor: "rgb(157, 192, 194)",
-              plot_bgcolor: "rgb(157, 192, 194)",
-            } }
-            useResizeHandler={true}
-          />
-
-          <Plot
-            data={[
-              {
-                values: yLevelGold,
-                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-                marker: {
-                  colors: ['#524300', '#7a6000', '#a17b00', '#cc9600', '#e6a900', '#ffbe0a', '#ffcb59', '#ffa754', '#ff7e29', '#ff4b0f'],
+                {
+                  x: x10,
+                  y: yGold,
+                  type: 'scatter',
+                  mode: 'lines+markers',
+                  line: {color: '#fcc930'},
+                  name: 'Gold plot',
                 },
-                type: 'pie',
-                name: 'Gold income',
-              },
-            ]}
-            layout={ {
-              autosize: true, 
-              title: 'Gold income from planets lv.1-10',
-              paper_bgcolor: "rgb(157, 192, 194)",
-              plot_bgcolor: "rgb(157, 192, 194)",
-            } }
-            useResizeHandler={true}
-          />
+              ]}
+              layout={ {
+                autosize: true, 
+                title: 'Gold + MaxHP based on level', 
+                paper_bgcolor: "rgb(157, 192, 194)",
+                plot_bgcolor: "rgb(157, 192, 194)",
+              } }
+              useResizeHandler={true}
+            />
+          </div>
+
+          
+          <div className='plot-div'>
+            <Plot
+              data={[
+                {
+                  x: x1to10,
+                  y: yHp1to10,
+                  type: 'scatter',
+                  mode: 'lines+markers',
+                  line: {color: 'red'},
+                  name: 'Hp plot lv 1-10',
+                },
+              ]}
+              layout={ {
+                autosize: true, 
+                title: 'MaxHP levels 1-10',
+                paper_bgcolor: "rgb(157, 192, 194)",
+                plot_bgcolor: "rgb(157, 192, 194)",
+              } }
+              useResizeHandler={true}
+            />
+          </div>
+
+          <div className='plot-div'>
+            <Plot
+              data={[
+                {
+                  x: x50to100,
+                  y: yHp50to100,
+                  type: 'scatter',
+                  mode: 'lines+markers',
+                  line: {color: 'red'},
+                  name: 'Hp plot lv 50-100',
+                },
+              ]}
+              layout={ {
+                autosize: true, 
+                title: 'MaxHP levels 50-100',
+                paper_bgcolor: "rgb(157, 192, 194)",
+                plot_bgcolor: "rgb(157, 192, 194)",
+              } }
+              useResizeHandler={true}
+            />
+          </div>
+
+          <div className='plot-div'>
+            <Plot
+              data={[
+                {
+                  x: x100,
+                  y: yGold100,
+                  type: 'scatter',
+                  mode: 'lines+markers',
+                  line: {color: '#fcc930'},
+                  name: 'Gold plot',
+                },
+              ]}
+              layout={ {
+                autosize: true,
+                title: 'Gold plot',
+                paper_bgcolor: "rgb(157, 192, 194)",
+                plot_bgcolor: "rgb(157, 192, 194)",
+              } }
+              useResizeHandler={true}
+            />
+          </div>
+
+          <div className='plot-div'>
+            <Plot
+              data={[
+                {
+                  x: ['1st to 2nd', '2nd to 3rd', '3rd to 4th'],
+                  y: itemCostDiff_divide,
+                  marker: {
+                    color: ['#4287f5', '#5af542', '#f54242'],
+                  },
+                  type: 'bar',
+                  name: 'Items plot',
+                },
+              ]}
+              layout={ {
+                autosize: true, 
+                title: 'Each item cost multiplier relative to the next one',
+                paper_bgcolor: "rgb(157, 192, 194)",
+                plot_bgcolor: "rgb(157, 192, 194)",
+              } }
+              useResizeHandler={true}
+            />
+          </div>
+
+          <div className='plot-div'>
+            <Plot
+              data={[
+                {
+                  values: yLevelGold,
+                  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                  marker: {
+                    colors: ['#524300', '#7a6000', '#a17b00', '#cc9600', '#e6a900', '#ffbe0a', '#ffcb59', '#ffa754', '#ff7e29', '#ff4b0f'],
+                  },
+                  type: 'pie',
+                  name: 'Gold income',
+                },
+              ]}
+              layout={ {
+                autosize: true, 
+                title: 'Gold income from planets lv.1-10',
+                paper_bgcolor: "rgb(157, 192, 194)",
+                plot_bgcolor: "rgb(157, 192, 194)",
+              } }
+              useResizeHandler={true}
+            />
+          </div>
         </div>
       </div>
     </>
