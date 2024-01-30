@@ -23,8 +23,10 @@ body {
   grid-row-gap: 0px;
 }
 
-.plot-container > * {
+.plot-div > div {
   width: 600px;
   height: 350px;
   margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
 }
